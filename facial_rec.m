@@ -5,7 +5,7 @@ close all;
 folder_path = 'att_faces/s*';
 image_path = 'att_faces/s*/*.pgm';
 files = ["test_17_4.pgm", "test_32_9.pgm", "test_7_7.pgm"];
-test_file = char(files(3));
+test_file = char(files(1));
 
 %% read from database
 image_data = read_images(image_path);
