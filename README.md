@@ -88,7 +88,7 @@ end
 
 ### Result
 
-The matlab code takes an sample face and out put the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% acccuracy. So I tried to rotate and flip the input image and check the accuracy again.
+The Matlab code takes an sample face and out put the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% acccuracy. So I tried to rotate and flip the input image and check the accuracy again.
 
  original input        |  flip   |   rotate 90 
 :-------------------------:|:-------------------------:|:-------------------------:
