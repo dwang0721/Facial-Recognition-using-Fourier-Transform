@@ -91,7 +91,7 @@ The matlab code takes an sample face and out put the face number. So if I use fa
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/display%20sample.jpg" alt="Smiley face" height="250" width="290">|  <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/fliped%20sample_both_match.jpg" alt="Smiley face" height="250" width="300">|<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/rotate90%20sample_none_match.jpg" alt="Smiley face" height="250" width="300">
  acc > 95%       |   acc > 90%    |   acc < 10% 
 
-This algorithm is not very robust to rotations. 
+This algorithm is not very robust to rotations. ¯ \ _ (ツ) _ / ¯;
 
 
 
