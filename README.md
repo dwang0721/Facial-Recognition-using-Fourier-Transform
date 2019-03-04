@@ -38,31 +38,38 @@ We need to apply Fourier Transform to the whole image database, and find out whe
 </p>
 
 
-Varicance of frequency in image data         |  Varicance of real frequency            |  Varicance of imaginary frequency
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/freq.jpg" alt="Smiley face" height="250" width="280">| <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/real.jpg" height="250" width="280">|<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/imaginary.jpg" height="250" width="280">
+Varicance of frequency in image data         | 
+:-------------------------:|
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/freq.jpg" alt="Smiley face" height="250" width="300">| 
 
 
 <p>
-The left most plot is the variance of frequency through out the whole image database. If we decompose this variance plot into "real" and "imaginary " parts, we get the two plots on the right. (The real part is the cos wave, and imaginary part is the cos wave, as we explained in the above). We can see something very interesting: Two bright spot around the origin! Look closely, the brightest part are the most variant frequencies, and they form a diamond shape with a black whole in the center. 
+The above plot is the variance of frequency through out the whole image database. If we decompose this variance plot into "real" and "imaginary " parts, we get the two plots below. (The real part is the cos wave, and imaginary part is the cos wave, as we explained in the above). We can see something very interesting: Two bright spot around the origin! Look closely, the brightest part are the most variant frequencies, and they form a diamond shape with a black whole in the center. 
 </p>
+
+Varicance of real frequency |  Varicance of imaginary frequency
+:-------------------------:|:-------------------------:
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/real.jpg" height="360" width="410"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/imaginary.jpg" height="360" width="410">
+
 
 <p>
 Set the threshold for both real and imaginary part, we can filter those brightest spot!
 </p>
 
- <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/threshold2.JPG" height="80" width="500">
+```matlab
+% locate the big variance in both parts of the image data
+big_variance_real = real_var_map > 0.7;
+big_variance_imag = imag_var_map > 0.05;
+```
+
 <p>
 Plot the 1/4 of the "diamond", which is the fourth lower quadrant. 1 indicates the most variant frequencies though out the image database. We can use this matrices as masks to filter out  the most variant frequencies.</p>
 
-<div>
-   <div>
-  <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_real_loc.JPG" alt="Smiley face" height="250" width="300">
-  </div>
-  <div>
-  <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_imag_loc.JPG" alt="Smiley face" height="250" width="300">
-  </div>
-</div>
+
+Location of most variant real frequency        |  Location of most variant imaginary frequency
+:-------------------------:|:-------------------------:
+  <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_real_loc.JPG" alt="Smiley face" height="250" width="300"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_imag_loc.JPG" alt="Smiley face" height="250" width="300">
+  
 
 
 ### Result
