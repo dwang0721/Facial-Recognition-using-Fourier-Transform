@@ -18,6 +18,15 @@ The formula of Fourier Transform means that an image of size N x M can be decomp
 
 Euler's formula just says that each wave length is made of cos and sin waves, written in a complex number form, where cos is in the real part and sin is in the imaginary part. 
 
+### What on earth are you talking about?
+The math may seem to be complicated, but the two formulas explain a simple concept: animage is composed of varisous frequencies. Here is the example of Fourier Transform:
+
+5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        |  Three waves combined
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave.jpg" alt="Smiley face" height="180" width="200"> 
+FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        | FFT of Three waves combined
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave%20fft.jpg" alt="Smiley face" height="180" width="200"> 
+
 ### The Approach
 <p>
 Take an face image and pad the image into 128 x 128 pixels. Fourier Transform of the image is on the right:
