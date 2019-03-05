@@ -105,12 +105,13 @@ end
 
 The Matlab code takes an sample face and out put the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% acccuracy. So I tried to rotate and flip the input image and check the accuracy again.
 
- original input        |  flip   |   rotate 90 
+ original input # 17      |  # 17 flip   |   # 17  rotate 90 
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/display%20sample.jpg" alt="Smiley face" height="250" width="290">|  <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/fliped%20sample_both_match.jpg" alt="Smiley face" height="250" width="300">|<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/rotate90%20sample_none_match.jpg" alt="Smiley face" height="250" width="300">
- acc > 95%       |   acc > 90%    |   acc < 10% 
+output: real 17,  imag 17     |   output: real 17,  imag 9    |   output: real 37,  imag 29 
+ avg acc > 95%       |  avg acc > 90%    |  avg acc < 10% 
 
-This algorithm is not very robust to rotations. ¯ \ _ (ツ) _ / ¯;
+This algorithm is not very robust to rotations. ¯ \ _ (ツ) _ / ¯
 
 
 
