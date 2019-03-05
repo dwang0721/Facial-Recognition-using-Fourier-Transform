@@ -75,7 +75,7 @@ big_variance_imag = imag_var_map > 0.05;
 ```
 
 <p>
-Plot the 1/4 of the "diamond", which is the fourth lower quadrant. 1 indicates the most variant frequencies though out the image database. We can use this matrices as masks to filter out  the most variant frequencies.</p>
+Plot the 1/4 of the "diamond", which is the fourth lower quadrant. 1 indicates the most variant frequencies though out the image database. We can use the two matrices as masks to filter out the feature frequencies.</p>
 
 
 Location of real feature frequency        |  Location of imaginary feature frequency
