@@ -21,11 +21,17 @@ Euler's formula just says that each wave length is made of cos and sin waves, wr
 ### What on earth are you talking about?
 The math may seem to be complicated, but the two formulas explain a simple concept: animage is composed of varisous frequencies. Here is the example of Fourier Transform:
 
-5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        |  Three waves combined
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave.jpg" alt="Smiley face" height="180" width="200"> 
-FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        | FFT of Three waves combined
-<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="180" width="200"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave%20fft.jpg" alt="Smiley face" height="180" width="200"> 
+5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine.jpg" alt="Smiley face" height="200" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine.jpg" alt="Smiley face" height="200" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine.jpg" alt="Smiley face" height="200" width="260"> 
+FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="200" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="200" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="200" width="260"> 
+
+Guess what happens if we combine and overlay the obove three images and do a Fourier Transform?
+
+Three waves combined | FFT of Three waves combined
+:-------------------------:|:-------------------------:
+<img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave.jpg" alt="Smiley face" height="300" width="340"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave%20fft.jpg" alt="Smiley face" height="300" width="340"> 
 
 ### The Approach
 <p>
