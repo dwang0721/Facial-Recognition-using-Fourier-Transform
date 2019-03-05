@@ -19,7 +19,7 @@ The formula of Fourier Transform means that an image of size N x M can be decomp
 Euler's formula just says that each wave length is made of cos and sin waves, written in a complex number form, where cos is in the real part and sin is in the imaginary part. 
 
 ### What on earth are you talking about?
-The math may seem to be complicated, but the two formulas explain a simple concept: animage is composed of varisous frequencies. Here is the example of Fourier Transform:
+The math may seem to be complicated, but the two formulas explain a simple concept: an image is composed of various frequencies. Here is the example of Fourier Transform:
 
 5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -27,7 +27,7 @@ The math may seem to be complicated, but the two formulas explain a simple conce
 FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> 
 
-As we can see from above result: After Fourier Transform, each frequency is decomposed into 2 white pixels, symetrical to the origin (0,0). higher frequecies pixels (FFT) are farther away from the origin and their direction aligns with the wave direction. Guess what happens if we combine and overlay the obove three images and do a Fourier Transform?
+As we can see from the above result: After Fourier Transform, each frequency is decomposed into 2 white pixels, symmetrical to the origin (0,0). Higher frequencies pixels are farther away from the origin and their direction aligns with the wave direction. Guess what happens if we overlay the above three images and do a Fourier Transform?
 
 Three waves combined | FFT of Three waves combined
 :-------------------------:|:-------------------------:
