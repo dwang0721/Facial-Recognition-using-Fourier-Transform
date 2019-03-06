@@ -1,7 +1,7 @@
 # Facial-Recognition-using-Fourier-Transform
 
 ### The Idea
-Fourier Transform is just one of many different face recognition methods that have been developed over the last 25 years. Comparing to the Machine Learning approach, Fourier Transform is a very simple and fast algorithm. It extracts frequency features of a face, rather than analyzing the image pattern using constitutional network. The Main idea is to find the most variant frequencies in the face database and identify the faces by matching these frequencies.
+Fourier Transform is just one of many different face recognition methods that have been developed over the last 25 years. Comparing to the Machine Learning approach, Fourier Transform is a very simple and fast algorithm. It extracts frequency features of a face, rather than analyzing the image pattern using constitutional network. The Main idea is to find the most variant frequencies in the image database and identify the faces by matching these frequencies.
 
 ### The Math
 #### Fourier Transform
@@ -18,7 +18,7 @@ The formula of Fourier Transform means that an image of size N x M can be decomp
 
 Euler's formula just says that each wave length is made of cos and sin waves, written in a complex number form, where cos is in the real part and sin is in the imaginary part. 
 
-### What on earth are you talking about?
+### Visualization of Fourier Transform
 The math may seem to be complicated, but the two formulas explain a simple concept: an image is composed of various frequencies. Here is the example of Fourier Transform:
 
 5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        
@@ -27,7 +27,7 @@ The math may seem to be complicated, but the two formulas explain a simple conce
 FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> 
 
-As we can see from the above result: After Fourier Transform, each frequency is decomposed into 2 white pixels, symmetrical to the origin (0,0). Higher frequencies pixels are farther away from the origin and their direction aligns with the wave direction. Guess what happens if we overlay the above three images and do a Fourier Transform?
+The above images show: After Fourier Transform, each frequency is decomposed into 2 white pixels, symmetrical around the origin (0,0). Higher frequencie are farther away from the origin and their direction aligns with the wave direction. Overlaying the above three images and Forier Transform it, we get this:
 
 Three waves combined | FFT of Three waves combined
 :-------------------------:|:-------------------------:
