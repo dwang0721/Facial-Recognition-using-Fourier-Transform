@@ -50,13 +50,13 @@ We need to apply Fourier Transform to the whole image database, and find out whe
 </p>
 
 
-Varicance of frequency in image data         | 
+The variance of frequency in image data         | 
 :-------------------------:|
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/freq.jpg" alt="Smiley face" height="250" width="300">| 
 
 
 <p>
-The above plot is the variance of frequency through out the whole image database. If we decompose this variance plot into "real" and "imaginary " parts, we get the two plots below. (The real part is the cos wave, and imaginary part is the sin wave, as we explained in the above). We can see something very interesting: Two bright spot around the origin! Look closely, the brightest part are the most variant frequencies, distinguishing the face features of among all images. We can call them feature frequencies! 
+The above plot is the variance of frequency throughout the whole image database. If we decompose this variance plot into "real" and the "imaginary " parts, we get the two plots below. (The real part is the cos wave, and imaginary part is the sin wave, as we explained in the above). We can see something very interesting: Two bright diamonds  around the origin! Look closely, the brightest part is the most variant frequencies, distinguishing the face features of among all images. They are the feature frequencies! 
 </p>
 
 real feature frequency |  imaginary feature frequency
@@ -65,7 +65,7 @@ real feature frequency |  imaginary feature frequency
 
 
 <p>
-Set the threshold for both real and imaginary part, we can filter those brightest spot!
+Set the threshold for both real and imaginary part, we can filter those feature frequencies!
 </p>
 
 ```matlab
@@ -75,16 +75,16 @@ big_variance_imag = imag_var_map > 0.05;
 ```
 
 <p>
-Plot the 1/4 of the "diamond", which is the fourth lower quadrant. 1 indicates the most variant frequencies though out the image database. We can use the two matrices as masks to filter out the feature frequencies.</p>
+Plot the 1/4 of the "diamond", which is the fourth lower quadrant. 1 indicates the most variant frequencies throughout the image database. We can use the two matrices as masks to filter out the feature frequencies.</p>
 
 
 Location of real feature frequency        |  Location of imaginary feature frequency
 :-------------------------:|:-------------------------:
   <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_real_loc.JPG" alt="Smiley face" height="250" width="300"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/big_variance_imag_loc.JPG" alt="Smiley face" height="250" width="300">
  
-After deleting these feature frequecies, the input sample lose many details:
+After deleting these feature frequencies, the input sample loses many details:
  
- original input        |  delete feature frequecies
+ original input        |  delete feature frequencies
 :-------------------------:|:-------------------------:
   <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/display%20sample.jpg" alt="Smiley face" height="250" width="300"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/ifft_sample.jpg" alt="Smiley face" height="250" width="300">
  
@@ -103,7 +103,7 @@ end
 
 ### Result
 
-The Matlab code takes an sample face and out put the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% acccuracy. So I tried to rotate and flip the input image and check the accuracy again.
+The Matlab code takes a sample face and outputs the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% accuracy. So I tried to rotate and flip the input image and check the accuracy again.
 
  original input # 17      |  # 17 flip   |   # 17  rotate 90 
 :-------------------------:|:-------------------------:|:-------------------------:
