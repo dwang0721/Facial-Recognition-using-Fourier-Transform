@@ -1,9 +1,14 @@
 # Facial-Recognition-using-Fourier-Transform
 
-### The Idea
+## The Idea
 Fourier Transform is just one of many different face recognition methods that have been developed over the last 25 years. Comparing to the Machine Learning approach, Fourier Transform is a very simple and fast algorithm. It extracts frequency features of a face, rather than analyzing the image pattern using a convolutional network. The Main idea is to find the most variant frequencies in the image database and identify the faces by matching these frequencies.
 
-### The Math
+The face on the left is used as input in this algorithm. The predicted face is on the right:
+
+![example](https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/output_small_gif.gif)
+
+
+## The Math
 #### Fourier Transform
 <p align="middle">
 <a href="https://www.codecogs.com/eqnedit.php?latex=f'_{u,v}&space;=&space;\sum_{y=0}^{M-1}\sum_{x=0}^{N-1}{f_{x,y}}\cdot&space;e^{{2\pi&space;j}{(\frac{x\cdot&space;u}{N}&space;&plus;&space;\frac{y\cdot&space;v}{M})}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f'_{u,v}&space;=&space;\sum_{y=0}^{M-1}\sum_{x=0}^{N-1}{f_{x,y}}\cdot&space;e^{{2\pi&space;j}{(\frac{x\cdot&space;u}{N}&space;&plus;&space;\frac{y\cdot&space;v}{M})}}" title="f'_{u,v} = \sum_{y=0}^{M-1}\sum_{x=0}^{N-1}{f_{x,y}}\cdot e^{{2\pi j}{(\frac{x\cdot u}{N} + \frac{y\cdot v}{M})}}" /></a>
@@ -18,7 +23,8 @@ The formula of Fourier Transform means that an image of size N x M can be decomp
 
 Euler's formula just says that each wave length is made of cos and sin waves, written in a complex number form, where cos is in the real part and sin is in the imaginary part. 
 
-### Visualization of Fourier Transform
+
+## Visualization of Fourier Transform
 The math may seem to be complicated, but the two formulas explain a simple concept: an image is composed of various frequencies. Here is the example of Fourier Transform:
 
 5 horizontal waves         |  10 horizontal waves      | 15 diagonal  waves        
@@ -33,7 +39,8 @@ Three waves combined | FFT of Three waves combined
 :-------------------------:|:-------------------------:
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave.jpg" alt="Smiley face" height="300" width="340"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/combined%20wave%20fft.jpg" alt="Smiley face" height="300" width="340"> 
 
-### The Approach
+
+## The Approach
 <p>
 Take a face image and pad the image into 128 x 128 pixels. Fourier Transform of the image is on the right:
 </p>
@@ -101,9 +108,11 @@ function x = feature_distance(A, B)
 end
 ```
 
-### Result
 
-The Matlab code takes a sample face and outputs the face number. So if I use face 7, the algorithm should output 7 in real and imaginary feature vectors. It has above 95% accuracy. So I tried to rotate and flip the input image and check the accuracy again.
+## Result
+
+The Matlab code takes a sample face as an input, and find the closest distance in the feature pace and output that face from the image database. I found the real part frequency matters more than the imaginary. It has above 95% accuracy. So I tried to rotate and flip the input image and check the accuracy again.
+
 
  original input # 17      |  # 17 flip   |   # 17  rotate 90 
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -111,7 +120,7 @@ The Matlab code takes a sample face and outputs the face number. So if I use fac
 output: real 17,  imag 17     |   output: real 17,  imag 9    |   output: real 37,  imag 29 
  avg acc > 95%       |  avg acc > 90%    |  avg acc < 10% 
 
-This algorithm is not very robust to rotations. ¯ \ _ (ツ) _ / ¯
+This algorithm seems not to be very robust to rotations, but I doubt people would rotate their head 90 degrees when taking pictures. ¯ \ _ (ツ) _ / ¯
 
 
 
