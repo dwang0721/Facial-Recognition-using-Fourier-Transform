@@ -1,7 +1,7 @@
 # Facial-Recognition-using-Fourier-Transform
 
 ### The Idea
-Fourier Transform is just one of many different face recognition methods that have been developed over the last 25 years. Comparing to the Machine Learning approach, Fourier Transform is a very simple and fast algorithm. It extracts frequency features of a face, rather than analyzing the image pattern using constitutional network. The Main idea is to find the most variant frequencies in the image database and identify the faces by matching these frequencies.
+Fourier Transform is just one of many different face recognition methods that have been developed over the last 25 years. Comparing to the Machine Learning approach, Fourier Transform is a very simple and fast algorithm. It extracts frequency features of a face, rather than analyzing the image pattern using a convolutional network. The Main idea is to find the most variant frequencies in the image database and identify the faces by matching these frequencies.
 
 ### The Math
 #### Fourier Transform
