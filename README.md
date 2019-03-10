@@ -27,7 +27,7 @@ The math may seem to be complicated, but the two formulas explain a simple conce
 FFT of 5 horizontal waves         |  FFT of 10 horizontal waves      | FFT of 15 diagonal  waves        
 <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/5%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/10%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> | <img src="https://github.com/dwang0721/Facial-Recognition-using-Fourier-Transform/blob/master/output%20images/15%20wave%20sine%20fft.jpg" alt="Smiley face" height="230" width="260"> 
 
-The above images show: After Fourier Transform, each frequency is decomposed into 2 white pixels, symmetrical around the origin (0,0). Higher frequencie are farther away from the origin and their direction aligns with the wave direction. Overlaying the above three images and Forier Transform it, we get this:
+The above images show: After Fourier Transform, each frequency is decomposed into 2 white pixels, symmetrical around the origin (0,0). Higher frequencies are farther away from the origin and their direction aligns with the wave direction. Overlaying the above three images and Fourier Transform it, we get this:
 
 Three waves combined | FFT of Three waves combined
 :-------------------------:|:-------------------------:
@@ -35,7 +35,7 @@ Three waves combined | FFT of Three waves combined
 
 ### The Approach
 <p>
-Take an face image and pad the image into 128 x 128 pixels. Fourier Transform of the image is on the right:
+Take a face image and pad the image into 128 x 128 pixels. Fourier Transform of the image is on the right:
 </p>
 
 
