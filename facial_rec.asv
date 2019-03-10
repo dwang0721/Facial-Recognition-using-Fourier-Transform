@@ -27,11 +27,10 @@ display_freq(imag_var_map, 'Variance imaginary part');
 %% locate the most variant frequency and set those to zeros
 % display the sample image
 sample = double(imread(test_file))/255;
+sample = padarray(sample,[8,18],'replicate');
 
 % sample = flip(sample, 1);
-
-sample = padarray(sample,[8,18],'replicate');
-% sample = imrotate(sample,5,'crop');
+% sample = imrotate(sample,90,'crop');
 
 display_freq(sample, 'Sample');
 
@@ -123,9 +122,23 @@ end
 [min_dis_imag,min_index_imag] = min(feature_dis_imag);
 
 % output
-strcat()
+strcat('best match in real: ', string(min_index_real))
+strcat('best match in imarinary: ', string(min_index_imag))
 
+%% take the real part and output a similar face
+i = randi([1,10]);
+predict_image_path = strcat('att_faces/s', string(min_index_real), '/', string(i), '.pgm');
+output = double(imread(char(predict_image_path)))/255;
+output = padarray(output,[8,18],'replicate');
 
+figure;
+subplot(1,2,1)
+imshow(sample);
+title('input image'); 
+
+subplot(1,2,2)
+imshow(output);
+title('output prediction'); 
 
 function x = feature_distance(A, B)
 %The distances between the feature vectors
