@@ -111,7 +111,7 @@ end
 
 ## Result
 
-The Matlab code takes a sample face as an input, and find the closest distance in the feature pace and output that face from the image database. I found the real part frequency matters more than the imaginary. It has above 95% accuracy. So I tried to rotate and flip the input image and check the accuracy again.
+The Matlab code takes a sample face as an input, and find the closest distance in the feature space and output that face from the image database. I found the real part frequency matters more than the imaginary. It has above 95% accuracy. So I tried to rotate and flip the input image and check the accuracy again.
 
 
  original input # 17      |  # 17 flip   |   # 17  rotate 90 
